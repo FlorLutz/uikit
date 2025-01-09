@@ -1,0 +1,31 @@
+@write-color: blue;
+@radius: 15px;
+@sizing: 8px;
+@border-props: black solid 2px;
+* {
+  color: @write-color;
+  margin: 0;
+  padding: 0;
+  margin-bottom: (@sizing / 2);
+}
+.flex {
+  background: lightgreen;
+  display: flex;
+  .child2 {
+    color: red;
+  }
+  div {
+    .button();
+    margin: 0 @sizing;
+    padding: (@sizing / 2);
+    text-align: center;
+  }
+}
+.button {
+  border: @border-props;
+  border-radius: @radius;
+  color: darken(yellow, 5%);
+  background-color: lighten(@write-color, 30%);
+  width: @sizing * 10;
+  box-shadow: black 4px 4px 8px;
+}
